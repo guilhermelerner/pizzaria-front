@@ -1,0 +1,37 @@
+/* src/app/app.component.css */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  /* Borda inferior com as cores da Itália */
+  border-bottom: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #008C45, #F4F5F0, #CD212A);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-header button {
+  padding: 10px 20px;
+  border: 1px solid #CD212A; /* Borda vermelha */
+  border-radius: 5px;
+  background-color: transparent;
+  color: #CD212A; /* Texto vermelho */
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-header button:hover {
+  background-color: #CD212A; /* Fundo vermelho ao passar o mouse */
+  color: white;
+}

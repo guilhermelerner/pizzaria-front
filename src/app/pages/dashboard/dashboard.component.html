@@ -1,0 +1,25 @@
+<div class="dashboard-page container">
+  <h2>Nossas Pizzarias Cadastradas</h2>
+
+  <div *ngIf="isLoading" class="loading-message">
+    <p>Buscando dados no forno...</p>
+  </div>
+
+  <div *ngIf="!isLoading">
+    <div *ngIf="pizzarias.length > 0; else noPizzarias" class="pizzaria-list">
+
+      <div *ngFor="let pizzaria of pizzarias" class="pizzaria-card">
+        <h3>{{ pizzaria.nome }}</h3>
+        <p><strong>Endereço:</strong> {{ pizzaria.endereco }}</p>
+        <p><strong>Telefone:</strong> {{ pizzaria.telefone }}</p>
+        <p><strong>Funcionamento:</strong> {{ pizzaria.horario_funcionamento }}</p>
+        <p><strong>Pagamento:</strong> {{ pizzaria.formas_pagamento }}</p>
+      </div>
+
+    </div>
+
+    <ng-template #noPizzarias>
+      <p class="empty-message">Nenhuma pizzaria encontrada ou cadastrada.</p>
+    </ng-template>
+  </div>
+</div>
